@@ -34,7 +34,7 @@ def root():
     with sqlite3.connect('database.db') as conn:
         cur = conn.cursor()
         # Show last product added
-        cur.execute('SELECT productId, name, price, description, image, stock FROM products ORDER BY productId DESC LIMIT 1 ')
+        cur.execute('SELECT productId, name, price, description, image, stock FROM products ORDER BY productId DESC LIMIT 4 ')
         # Show all items
         #cur.execute('SELECT productId, name, price, description, image, stock FROM products LIMIT 1')
         item_data = cur.fetchall()
